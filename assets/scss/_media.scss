@@ -1,0 +1,202 @@
+@media (max-width: 998px) {
+	.info-city {
+		&__info {
+			margin-bottom: 30px;
+		}
+		&__wrapper {
+			flex-direction: column;
+
+			p {
+				font-size: 15px;
+			}
+		}
+	}
+
+	.attractions__cards {
+		grid-template-columns: 1fr !important;
+		gap: 50px !important;
+	}
+}
+
+@media (max-width: 778px) {
+	.header .header__wrapper {
+		gap: 30px;
+	}
+
+	.main-text {
+		font-size: 50px !important;
+		margin-bottom: 28px !important;
+	}
+	.slide-content__desc {
+		width: 600px;
+	}
+}
+
+@media (max-width: 650px) {
+	.header .menu {
+		display: block !important;
+	}
+	.header .menu .burger-checkbox {
+		position: absolute;
+		visibility: hidden;
+	}
+	.header .menu .burger {
+		position: relative;
+		z-index: 100;
+		cursor: pointer;
+		display: block;
+		position: relative;
+		border: none;
+		background: transparent;
+		width: 40px;
+		height: 26px;
+	}
+	.header .menu .burger::before,
+	.header .menu .burger::after {
+		content: '';
+		left: 0;
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 4px;
+		border-radius: 10px;
+		background: #000;
+	}
+	.header .menu .burger::before {
+		top: 0;
+		box-shadow: 0 11px 0 #000;
+		transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+	}
+	.header .menu .burger::after {
+		bottom: 0;
+		transition: bottom 0.3s 0.15s, transform 0.3s;
+	}
+	.header .menu .burger-checkbox:checked + .burger::before {
+		top: 11px;
+		transform: rotate(45deg);
+		box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+		transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+		filter: invert(1);
+	}
+	.header .menu .burger-checkbox:checked + .burger::after {
+		bottom: 11px;
+		transform: rotate(-45deg);
+		transition: bottom 0.3s, transform 0.3s 0.15s;
+		filter: invert(1);
+	}
+	.header .menu .menu-list {
+		top: 0;
+		left: 0;
+		position: absolute;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		gap: 12px;
+		padding: 42px 0;
+		margin: 0;
+		background: $cod-gray;
+		list-style-type: none;
+		transform: translateX(-100%);
+		transition: 0.3s;
+		width: 100%;
+		height: 100vh;
+		z-index: 99;
+	}
+	.header .menu .menu-item {
+		display: block;
+		padding: 8px;
+		color: white;
+		font-size: 18px;
+		text-align: center;
+		text-decoration: none;
+	}
+	.header .menu .menu-item__cart {
+		background-color: #fff;
+		width: 200px;
+		transition: opacity 0.3s ease;
+	}
+	.header .menu .menu-item__cart:hover {
+		opacity: 0.8;
+	}
+	.header .menu .menu-item:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
+	.header .menu .burger-checkbox:checked ~ .menu-list {
+		transform: translateX(0);
+	}
+	nav .nav-list {
+		display: none !important;
+	}
+}
+
+@media (max-width: 628px) {
+	.info-city {
+		p {
+			font-size: 15px !important;
+		}
+	}
+
+	.main-text {
+		font-size: 40px !important;
+		margin-bottom: 10px !important;
+	}
+
+	.section-title {
+		font-size: 19px !important;
+	}
+	.info-city {
+		margin-bottom: 50px;
+		&__subtitle {
+			margin-bottom: 16px;
+		}
+	}
+
+	.slide-content__desc {
+		width: 500px;
+		font-size: 16px;
+	}
+	.slider {
+		margin-bottom: 10px !important;
+	}
+	.map {
+		margin-bottom: 50px !important;
+	}
+	.contacts {
+		font-size: 16px !important;
+	}
+	.footer {
+		&__wrapper {
+			gap: 40px;
+			flex-direction: column;
+			margin-bottom: 30px !important;
+		}
+
+		&__row-one,
+		&__row-two {
+			width: 100%;
+		}
+
+		form {
+			width: 100%;
+
+			flex-direction: column;
+			input {
+				width: 100%;
+				margin-bottom: 13px;
+			}
+
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 478px) {
+	.main-text {
+		font-size: 35px !important;
+	}
+	.hero__desc {
+		font-size: 14px;
+	}
+}

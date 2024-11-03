@@ -1,0 +1,19 @@
+.contacts {
+	font-size: 24px;
+	margin-bottom: 100px;
+	.phone,
+	.email {
+		margin-bottom: 25px;
+		a {
+			color: $cod-gray;
+			transition: 0.3s opacity ease;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	label {
+		display: block;
+		margin-bottom: 25px;
+	}
+}

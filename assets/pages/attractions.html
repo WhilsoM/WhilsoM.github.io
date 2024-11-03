@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Turneo</title>
+
+		<link rel="stylesheet" href="../scss/main.css" />
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../img/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../img/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../img/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="../img/favicon/site.webmanifest" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo">
+						<img src="../img/logo.svg" alt="turneo logo" />
+					</div>
+					<nav>
+						<ul class="nav-list">
+							<li>
+								<a href="../../index.html" class="nav-list__link">Главная</a>
+							</li>
+							<li>
+								<a href="#" class="nav-list__link">Достопримечательности</a>
+							</li>
+							<li>
+								<a href="./contacts.html" class="nav-list__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__wrapper">
+					<div class="theme">
+						<button>
+							<img
+								src="../img/sun.svg"
+								alt="sun"
+								class="theme__icon"
+								title="сменить тему"
+							/>
+						</button>
+					</div>
+
+					<div class="menu">
+						<input
+							type="checkbox"
+							id="burger-checkbox"
+							class="burger-checkbox"
+						/>
+						<label for="burger-checkbox" class="burger"></label>
+						<ul class="menu-list">
+							<li><a href="../../index.html" class="menu-item">Главная</a></li>
+							<li>
+								<a href="#" class="menu-item">Достопримечательности</a>
+							</li>
+							<li><a href="./contacts.html" class="menu-item">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="attractions">
+				<div class="container">
+					<div class="attractions__info">
+						<h1 class="section-title">Достопримечательности</h1>
+						<h4 class="attractions__subtitle">Санкт-Петербурга</h4>
+						<div class="border-line-red"></div>
+
+						<input
+							type="text"
+							placeholder="Поиск..."
+							class="attractions__input"
+						/>
+					</div>
+
+					<section class="attractions__cards">
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr1.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$99.00</p>
+
+							<h3 class="h3-title">Невский проспект и Казанский собор</h3>
+
+							<p class="card__desc">
+								Протяжённость Невского проспекта более четырёх километров. Самая
+								оживленная и интересная его часть между площадью Восстания у
+								Московского вокзала и Дворцовой площадью, на которой стоит
+								императорский Зимний дворец. На этом отрезке много магазинов,
+								ресторанов и кафе, часто играют уличные музыканты, художники
+								рисуют пейзажи и портреты.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr2.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$79.00</p>
+
+							<h3 class="h3-title">Дворцовая площадь и Эрмитаж</h3>
+
+							<p class="card__desc">
+								Если дойти по Невскому проспекту до Невы, справа вы увидите
+								Дворцовую площадь. Она выложена брусчаткой, а в центре
+								возвышается Александрийский столп, на вершине которого — фигура
+								ангела. Столп возвели по указу императора Николая I в память о
+								победе его старшего брата Александра I над Наполеоном.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr3.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$89.00</p>
+
+							<h3 class="h3-title">Спас на Крови</h3>
+
+							<p class="card__desc">
+								От Дворцовой площади можно пройти к храму Спаса на Крови. Его
+								построили на месте гибели Александра II, а внутри хранится
+								фрагмент мостовой, на которой тот погиб в результате покушения.
+								Храм — один из наиболее узнаваемых и в первую очередь восхищает
+								своим внешним видом с резными кокошниками на окнах, ювелирной
+								эмалью, восьмигранным шатром и разноцветными куполами. А мозаика
+								внутри занимает площадь более 7000 кв. м. — можно покрыть всю
+								дорогу от Невского до входа в здание. Пол выложен разнообразными
+								орнаментами из мраморных плит.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr4.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$89.00</p>
+
+							<h3 class="h3-title">Летний сад</h3>
+
+							<p class="card__desc">
+								Летний сад появился в городе по воле Петра I, который решил
+								устроить здесь свою резиденцию. Дворец построили в 1712 году, а
+								на облагороженной территории вокруг него разместили фонтаны и
+								античные статуи, часть которых царь лично привёз из Италии.
+								Сейчас среди них и коридоров из зелени расположены лавочки,
+								скульптуры и беседки, которые оплетены растениями. Парковая зона
+								начинается от Михайловского замка и идёт вдоль реки Фонтанки,
+								которая впадает в Неву. Вход в Летний сад бесплатный. Зимой
+								фонтаны не работают, а в апреле сад закрыт на просушку.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr5.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$89.00</p>
+
+							<h3 class="h3-title">Исаакиевский собор</h3>
+
+							<p class="card__desc">
+								Храм входит в число крупнейших культовых зданий мира, а ещё это
+								по сути главный кафедральный собор города. Внутри вы можете
+								посмотреть музейную экспозицию и посетить божественную литургию.
+								Обязательно поднимитесь на смотровую площадку над колоннадой
+								собора, чтобы полюбоваться панорамой города с высоты 101 метра.
+								Учтите, что наверху холодно и ветрено, а идти нужно по
+								ступенькам, которых аж 262. Во время подъёма вас не будет
+								покидать ощущение монументальности и величественности от высоких
+								сводов, массивных богато украшенных стен и большого числа икон.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card__img">
+								<img src="../img/attractions/attr6.jpg" alt="attr" />
+							</div>
+
+							<p class="card__price">$89.00</p>
+
+							<h3 class="h3-title">Петропавловская крепость</h3>
+
+							<p class="card__desc">
+								Петропавловская крепость расположена на небольшом острове, на
+								который можно попасть по одному из мостов (вы их даже не
+								заметите — настолько они небольшие). Вход на территорию
+								свободный: вы сможете прогуляться по брусчатым улицам, посетить
+								несколько музеев, посмотреть собор и усыпальницу российских
+								императоров и князей. Раз в день ровно в 12 часов из крепости
+								стреляет пушка. По ней можно сверять часы. Одним из наиболее
+								интересных мест крепости считается главная политическая тюрьма
+								царской России в Трубецком бастионе.
+							</p>
+						</article>
+					</section>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__row-one">
+						<img class="footer__img" src="../img/logo.svg" alt="logo" />
+
+						<p class="footer__desc">Путеводитель по городу Санкт-Петербург.</p>
+
+						<div class="footer__border-line"></div>
+						<p class="error"></p>
+						<form action="#">
+							<input type="email" placeholder="почта..." />
+							<button class="btn">отправить</button>
+						</form>
+					</div>
+
+					<div class="footer__row-two">
+						<h3>Contact Info</h3>
+						<div class="footer__border-line"></div>
+
+						<div class="row-two__email">
+							<h4>Почта</h4>
+							<a href="mailto:tatsveet@gmail.com">tatsveet@gmail.com</a>
+						</div>
+
+						<div class="row-two__phone">
+							<h4>Почта</h4>
+							<a href="tel:+79870689005">+79870689005</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__wrapper-2">
+				<p>© 2024 Copyright by Arthur Akhmetov</p>
+			</div>
+		</footer>
+
+		<script type="module" src="../scripts/main.js"></script>
+		<script src="../scripts/search-attractions.js"></script>
+	</body>
+</html>

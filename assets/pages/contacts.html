@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Turneo</title>
+
+		<link rel="stylesheet" href="../scss/main.css" />
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../img/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../img/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../img/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="../img/favicon/site.webmanifest" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo">
+						<img src="../img/logo.svg" alt="turneo logo" />
+					</div>
+					<nav>
+						<ul class="nav-list">
+							<li>
+								<a href="../../index.html" class="nav-list__link">Главная</a>
+							</li>
+							<li>
+								<a href="./attractions.html" class="nav-list__link"
+									>Достопримечательности</a
+								>
+							</li>
+							<li><a href="#!" class="nav-list__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__wrapper">
+					<div class="theme">
+						<button>
+							<img
+								src="../img/sun.svg"
+								alt="sun"
+								class="theme__icon"
+								title="сменить тему"
+							/>
+						</button>
+					</div>
+
+					<div class="menu">
+						<input
+							type="checkbox"
+							id="burger-checkbox"
+							class="burger-checkbox"
+						/>
+						<label for="burger-checkbox" class="burger"></label>
+						<ul class="menu-list">
+							<li><a href="../../index.html" class="menu-item">Главная</a></li>
+							<li>
+								<a href="./attractions.html" class="menu-item"
+									>Достопримечательности</a
+								>
+							</li>
+							<li><a href="" class="menu-item">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="contacts">
+				<div class="container">
+					<h2 class="section-title">Наши контакты</h2>
+					<p class="phone">
+						рабочий телефон: <a href="tel:+79870689005">+79870689005</a>
+					</p>
+					<p class="email">
+						рабочая почта:
+						<a href="mailto:tatsveet@gmail.com">tatsveet@gmail.com</a>
+					</p>
+
+					<button type="button" class="btn">Связаться с нами</button>
+
+					<div id="myModal" class="modal">
+						<div class="modal-content">
+							<form action="#" id="form">
+								<label>
+									Ваша почта:
+									<input type="email" id="email" name="email" />
+								</label>
+
+								<label>
+									Ваш телефон:
+									<input type="tel" id="tel" name="phone" />
+								</label>
+
+								<button class="btn" id="send">Отправить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__row-one">
+						<img class="footer__img" src="../img/logo.svg" alt="logo" />
+
+						<p class="footer__desc">Путеводитель по городу Санкт-Петербург.</p>
+
+						<div class="footer__border-line"></div>
+
+						<p class="error"></p>
+						<form action="#">
+							<input type="email" placeholder="почта..." />
+							<button class="btn">отправить</button>
+						</form>
+					</div>
+
+					<div class="footer__row-two">
+						<h3>Contact Info</h3>
+						<div class="footer__border-line"></div>
+
+						<div class="row-two__email">
+							<h4>Почта</h4>
+							<a href="mailto:tatsveet@gmail.com">tatsveet@gmail.com</a>
+						</div>
+
+						<div class="row-two__phone">
+							<h4>Почта</h4>
+							<a href="tel:+79870689005">+79870689005</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__wrapper-2">
+				<p>© 2024 Copyright by Arthur Akhmetov</p>
+			</div>
+		</footer>
+
+		<script type="module" src="../scripts/main.js"></script>
+		<script type="module" src="../scripts/modal.js"></script>
+	</body>
+</html>

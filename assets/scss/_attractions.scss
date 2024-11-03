@@ -1,0 +1,40 @@
+.attractions {
+	margin-bottom: 100px;
+	&__subtitle {
+		font-size: 18px;
+	}
+	&__info {
+		@include flex();
+		flex-direction: column;
+		gap: 15px;
+		margin-bottom: 30px;
+	}
+}
+.h3-title {
+	font-weight: 600;
+	font-size: 22px;
+}
+.attractions__cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: center;
+	gap: 20px;
+
+	.card {
+		@include flex();
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 20px;
+
+		&__price {
+			color: $dark-red;
+			font-size: 15px;
+			font-weight: 600;
+			background-color: transparent;
+			border-radius: 50%;
+			border: 1px solid $dark-red;
+			padding: 26px 11px;
+		}
+	}
+}

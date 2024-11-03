@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Turneo</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/scss/main.css" />
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./assets/img/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/img/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./assets/img/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo">
+						<img src="./assets/img/logo.svg" alt="turneo logo" />
+					</div>
+					<nav>
+						<ul class="nav-list">
+							<li>
+								<a href="" class="nav-list__link">Главная</a>
+							</li>
+							<li>
+								<a href="./assets/pages/attractions.html" class="nav-list__link"
+									>Достопримечательности</a
+								>
+							</li>
+							<li>
+								<a href="./assets/pages/contacts.html" class="nav-list__link"
+									>Контакты</a
+								>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__wrapper">
+					<div class="theme">
+						<button>
+							<img
+								src="./assets/img/sun.svg"
+								alt="sun"
+								class="theme__icon"
+								title="сменить тему"
+							/>
+						</button>
+					</div>
+
+					<div class="menu">
+						<input
+							type="checkbox"
+							id="burger-checkbox"
+							class="burger-checkbox"
+						/>
+						<label for="burger-checkbox" class="burger"></label>
+						<ul class="menu-list">
+							<li><a href="#" class="menu-item">Главная</a></li>
+							<li>
+								<a href="./assets/pages/attractions.html" class="menu-item"
+									>Достопримечательности</a
+								>
+							</li>
+							<li>
+								<a href="./assets/pages/contacts.html" class="menu-item"
+									>Контакты</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="hero">
+				<div class="container">
+					<h1 class="main-text">Путеводитель по городу Санкт-Петербург</h1>
+
+					<div class="border-line"></div>
+					<p class="hero__desc">
+						Санкт-Петербу́рг — второй по численности
+						населения город России. Город федерального
+						значения. Административный центр Северо-Западного федерального
+						округа. Основан 16 мая 1703 года царём Петром I. В 1714—1728 и
+						1732—1918 годах — столица Российского государства.
+					</p>
+				</div>
+			</section>
+
+			<div class="slide-container">
+				<div class="slides">
+					<img
+						src="./assets/img/slider-img1.webp"
+						alt=""
+						class="active img"
+						loading="lazy"
+					/>
+					<img
+						src="./assets/img/slider-img2.webp"
+						alt=""
+						class="img"
+						loading="lazy"
+					/>
+					<img
+						src="./assets/img/slider-img3.webp"
+						alt=""
+						class="img"
+						loading="lazy"
+					/>
+				</div>
+				<div class="buttons">
+					<span class="next">&#10095;</span>
+					<span class="prev">&#10094;</span>
+				</div>
+
+				<div class="dots-container">
+					<div
+						class="dot active"
+						id="active"
+						attr="0"
+						onclick="switchImage(this)"
+					></div>
+					<div class="dot" attr="1" onclick="switchImage(this)"></div>
+					<div class="dot" attr="2" onclick="switchImage(this)"></div>
+				</div>
+			</div>
+
+			<section class="info-city">
+				<div class="container">
+					<div class="info-city__info">
+						<h2 class="section-title">Санкт-Петербург</h2>
+						<p class="info-city__subtitle">
+							где находиться? что из себя представляет?
+						</p>
+
+						<div class="border-line-red"></div>
+					</div>
+
+					<div class="info-city__wrapper info-city__wrapper-mb">
+						<p>
+							Санкт-Петербург находится на северо-западе Европейской части
+							России.  Город расположен в устье реки Невы и узкой полосой вдоль
+							южного и северного берегов Финского залива Балтийского моря.
+							Протяжённость городской территории — более чем 90 км. 
+							Санкт-Петербург находится в 157 км от российско-финляндской и в
+							160 км от российско-эстонской границы. Граничит с Ломоносовским,
+							Гатчинским, Тосненским, Кировским, Всеволожским и Выборгским
+							районами Ленинградской области.  Координаты исторического центра
+							города — 59°57′ с. ш. и 30°19′ в. д..
+						</p>
+
+						<img
+							src="./assets/img/bridge-city.webp"
+							alt="bridge-city"
+							loading="lazy"
+						/>
+					</div>
+
+					<div class="info-city__wrapper">
+						<img
+							src="./assets/img/city-sea.webp"
+							alt="city sea"
+							loading="lazy"
+						/>
+
+						<p>
+							Это важный экономический, научный и культурный центр России,
+							крупный транспортный узел. Исторический центр города и связанные с
+							ним комплексы памятников входят в список объектов всемирного
+							наследия ЮНЕСКО.  Некоторые значимые культурно-туристические
+							объекты: Эрмитаж, Кунсткамера, Мариинский театр, Российская
+							национальная библиотека, Русский музей, Петропавловская крепость,
+							Исаакиевский собор, Невский проспект.  В городе расположены,
+							например, Конституционный суд РФ, Геральдический совет при
+							Президенте России, Главный штаб Военно-Морского Флота России. 
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d511641.7528354809!2d29.435367769975855!3d59.93876941537561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1728842194430!5m2!1sru!2sru"
+					width="100%"
+					height="300"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__row-one">
+						<img class="footer__img" src="./assets/img/logo.svg" alt="logo" />
+
+						<p class="footer__desc">Путеводитель по городу Санкт-Петербург.</p>
+
+						<div class="footer__border-line"></div>
+
+						<p class="error"></p>
+						<form action="#">
+							<input type="email" placeholder="почта..." />
+							<button class="btn">отправить</button>
+						</form>
+					</div>
+
+					<div class="footer__row-two">
+						<h3>Contact Info</h3>
+						<div class="footer__border-line"></div>
+
+						<div class="row-two__email">
+							<h4>Почта</h4>
+							<a href="mailto:tatsveet@gmail.com">tatsveet@gmail.com</a>
+						</div>
+
+						<div class="row-two__phone">
+							<h4>Почта</h4>
+							<a href="tel:+79870689005">+79870689005</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__wrapper-2">
+				<p>© 2024 Copyright by Arthur Akhmetov</p>
+			</div>
+		</footer>
+
+		<script type="module" src="./assets/scripts/main.js"></script>
+		<script src="./assets/scripts/slider.js"></script>
+	</body>
+</html>

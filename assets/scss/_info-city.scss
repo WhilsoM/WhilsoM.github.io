@@ -1,0 +1,33 @@
+.info-city {
+	margin-bottom: 131px;
+}
+
+.info-city__info {
+	@include flex();
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 61px;
+}
+
+.info-city__subtitle {
+	margin-bottom: 36px;
+}
+
+.border-line-red {
+	background-color: $red-color;
+	height: 4px;
+	width: 212px;
+}
+
+.info-city__wrapper {
+	@include flex();
+	justify-content: space-between;
+	gap: 25px;
+	font-size: 19px;
+	&-mb {
+		margin-bottom: 100px;
+	}
+	img {
+		width: 700px;
+	}
+}
