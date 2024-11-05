@@ -1,10 +1,37 @@
-import axios from 'axios'
+const attractionsWrapper = document.querySelector('.attractions__cards')
+
+let isLoading = true
 
 const fetchData = async () => {
-	const data = await axios.get(
-		'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
-	)
-	console.log(data)
+	try {
+		const obj = await axios.get(
+			'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
+		)
+		const res = obj.data
+
+		let result = ``
+
+		for (let i = 0; i < res.length; i++) {
+			result += `<article class="card">
+							<div class="card__img">
+								<img src=${res[i].avatar} alt=${res[i].title} />
+							</div>
+
+							<p class="card__price">$${res[i].price}</p>
+
+							<h3 class="h3-title">${res[i].title}</h3>
+
+							<p class="card__desc">
+								${res[i].short_desc}
+							</p>
+						</article>`
+		}
+		attractionsWrapper.innerHTML = result
+	} catch (error) {
+		console.log('хз не работает', error)
+	} finally {
+		isLoading = false
+	}
 }
 
 fetchData()
