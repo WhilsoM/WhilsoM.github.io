@@ -1,9 +1,12 @@
-const attractionsWrapper = document.querySelector('.attractions__cards')
+import { Loader } from './loader.js'
 
-let isLoading = true
+export const attractionsWrapper = document.querySelector('.attractions__cards')
+
+export let isLoading = true
 
 const fetchData = async () => {
 	try {
+		Loader()
 		const obj = await axios.get(
 			'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
 		)
@@ -28,7 +31,7 @@ const fetchData = async () => {
 		}
 		attractionsWrapper.innerHTML = result
 	} catch (error) {
-		console.log('хз не работает', error)
+		console.log('не работает', error)
 	} finally {
 		isLoading = false
 	}
