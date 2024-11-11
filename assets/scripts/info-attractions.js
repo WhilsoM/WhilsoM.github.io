@@ -12,12 +12,12 @@ const fetchData = async () => {
 		)
 		const res = obj.data
 
-		let result = ``
+		let result = ''
 
 		for (let i = 0; i < res.length; i++) {
 			result += `<article class="card">
 							<div class="card__img">
-								<img src=${res[i].avatar} alt=${res[i].title} />
+								<img src=${res[i].image} alt=${res[i].title} />
 							</div>
 
 							<p class="card__price">$${res[i].price}</p>
@@ -25,7 +25,7 @@ const fetchData = async () => {
 							<h3 class="h3-title">${res[i].title}</h3>
 
 							<p class="card__desc">
-								${res[i].short_desc}
+								${res[i].description}
 							</p>
 						</article>`
 		}
