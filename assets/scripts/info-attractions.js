@@ -6,7 +6,7 @@ const sortSelect = document.getElementById('sorting')
 
 export let isLoading = true
 
-let res = [] // Переменная для хранения данных
+let res = []
 
 const fetchData = async () => {
 	try {
@@ -17,7 +17,7 @@ const fetchData = async () => {
 		)
 		res = obj.data
 
-		displayData(res) // Отображение данных после загрузки
+		displayData(res)
 	} catch (error) {
 		console.log('не работает', error)
 	} finally {
@@ -59,7 +59,7 @@ sortSelect.addEventListener('change', (event) => {
 			sortedData = res
 	}
 
-	displayData(sortedData) // Отображение отсортированных данных
+	displayData(sortedData)
 })
 
 fetchData()
