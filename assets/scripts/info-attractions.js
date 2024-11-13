@@ -5,8 +5,8 @@ export const attractionsWrapper = document.querySelector('.attractions__cards')
 const sortSelect = document.getElementById('sorting')
 
 export let isLoading = true
-
-let res = []
+export let res = []
+let currentData = []
 
 const fetchData = async () => {
 	try {
@@ -16,8 +16,9 @@ const fetchData = async () => {
 			'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
 		)
 		res = obj.data
+		currentData = res
 
-		displayData(res)
+		displayData(currentData)
 	} catch (error) {
 		console.log('не работает', error)
 	} finally {
@@ -25,7 +26,7 @@ const fetchData = async () => {
 	}
 }
 
-const displayData = (data) => {
+export const displayData = (data) => {
 	let result = ''
 
 	for (let i = 0; i < data.length; i++) {
@@ -50,13 +51,13 @@ sortSelect.addEventListener('change', (event) => {
 
 	switch (sortType) {
 		case 'alphabet':
-			sortedData = sortAlphabetically(res)
+			sortedData = sortAlphabetically(currentData)
 			break
 		case 'price':
-			sortedData = sortByPrice(res)
+			sortedData = sortByPrice(currentData)
 			break
 		default:
-			sortedData = res
+			sortedData = currentData
 	}
 
 	displayData(sortedData)

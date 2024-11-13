@@ -458,6 +458,22 @@ legend {
   gap: 15px;
   margin-bottom: 30px;
 }
+.attractions .categories {
+  display: flex;
+  gap: 15px;
+}
+.attractions .categories .active {
+  background-color: #878787;
+}
+.attractions .categories button {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.attractions .categories button:hover {
+  background-color: #878787;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 .h3-title {
   font-weight: 600;

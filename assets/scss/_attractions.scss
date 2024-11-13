@@ -9,6 +9,23 @@
 		gap: 15px;
 		margin-bottom: 30px;
 	}
+	.categories {
+		display: flex;
+		gap: 15px;
+		.active {
+			background-color: #878787;
+		}
+		button {
+			cursor: pointer;
+			transition: all 0.5s ease;
+
+			&:hover {
+				background-color: #878787;
+				padding: 5px 10px;
+				border-radius: 5px;
+			}
+		}
+	}
 }
 .h3-title {
 	font-weight: 600;
