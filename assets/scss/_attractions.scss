@@ -19,6 +19,7 @@
 	grid-template-columns: repeat(2, 1fr);
 	text-align: center;
 	gap: 20px;
+	align-items: start;
 
 	.card {
 		@include flex();
@@ -27,6 +28,9 @@
 		flex-direction: column;
 		gap: 20px;
 
+		img {
+			height: 326px;
+		}
 		&__price {
 			color: $dark-red;
 			font-size: 15px;

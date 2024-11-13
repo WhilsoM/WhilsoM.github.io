@@ -469,6 +469,7 @@ legend {
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   gap: 20px;
+  align-items: start;
 }
 .attractions__cards .card {
   display: flex;
@@ -477,6 +478,9 @@ legend {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+}
+.attractions__cards .card img {
+  height: 326px;
 }
 .attractions__cards .card__price {
   color: #e01a33;
