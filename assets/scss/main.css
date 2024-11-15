@@ -446,6 +446,7 @@ legend {
   }
 }
 .attractions {
+  position: relative;
   margin-bottom: 100px;
 }
 .attractions__subtitle {
