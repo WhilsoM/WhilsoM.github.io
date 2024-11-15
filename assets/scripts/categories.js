@@ -1,10 +1,11 @@
 import { displayData, res } from './info-attractions.js'
 
-const categories = document.querySelectorAll('.categories button')
+const categoriesBtns = document.querySelectorAll('.categories button')
 
-categories.forEach((e) =>        {
-	e.addEventListener('click', (event) => {
+categoriesBtns.forEach((btn) => {
+	btn.addEventListener('click', (event) => {
 		const category = event.target.value
+		console.log(category)
 		let filteredData
 
 		if (category === 'all') {
