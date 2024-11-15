@@ -885,6 +885,10 @@ span.prev:hover {
 .map {
   margin-bottom: 157px;
 }
+.map iframe {
+  width: 100%;
+  height: 300px;
+}
 
 @keyframes myAnimation {
   from {
