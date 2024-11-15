@@ -1,69 +1,17 @@
-// /**
-//  * найти элемент модалки
-//  * сделать в scss классы со стилями
-//  * добавлять или убирать в зависимости от условия
-//  * когда пользователь полностью заполняет две формы
-//  * и нажимает на кнопку отправить
-//  * то потом идет модалка с сообщением
-//  * и сверху галочку зеленую какую нибудь
-//  * "заявка будет обрабатываться в течении дня!"
-//  */
-// import { validateEmail } from './mail-send.js'
-
-// const modal = document.querySelector('.modal')
-// const modalContent = document.querySelector('.modal-content')
-// const btn = document.querySelector('.btn')
-// const sendBtn = document.querySelector('#send')
-// const form = document.querySelector('form')
-// const emailInp = document.querySelector('#email')
-// const telInp = document.querySelector('#tel')
-
-// const p = document.createElement('p')
-// const closeBtn = document.createElement('button')
-// const error = document.createElement('p')
-
-// p.textContent = 'заявка будет обрабатываться в течении дня!'
-// closeBtn.textContent = 'закрыть'
-// error.textContent = 'Заполните корректно почту!'
-
-// error.classList.add('error')
-// p.style.marginBottom = '25px'
-// closeBtn.classList.add('btn')
-
-// let isOpenModal = false
-// let isError = false
-
-// btn.addEventListener('click', () => {
-// 	if (!isOpenModal) {
-// 		modal.style.display = 'block'
-// 	} else {
-// 		modal.style.display = 'none'
-// 	}
-// })
-
-// sendBtn.addEventListener('click', (e) => {
-// 	if (!isError) {
-// 		validateEmail(e, emailInp, error)
-// 		modalContent.appendChild(error)
-// 		isError = true
-// 		return
-// 	}
-// 	form.style.display = 'none'
-
-// 	modalContent.appendChild(p)
-// 	modalContent.appendChild(closeBtn)
-// })
-
-// closeBtn.addEventListener('click', () => {
-// 	if (isOpenModal) {
-// 		modal.style.display = 'block'
-// 	} else {
-// 		modal.style.display = 'none'
-// 	}
-// })
+/*
+ * найти элемент модалки
+ * сделать в scss классы со стилями
+ * добавлять или убирать в зависимости от условия
+ * когда пользователь полностью заполняет две формы
+ * и нажимает на кнопку отправить
+ * то потом идет модалка с сообщением
+ * и сверху галочку зеленую какую нибудь
+ * "заявка будет обрабатываться в течении дня!"
+ */
 
 import { validateEmail } from './mail-send.js'
 
+// поиск элементов
 const modal = document.querySelector('.modal')
 const modalContent = document.querySelector('.modal-content')
 const sendBtn = document.querySelector('#send')
@@ -72,6 +20,7 @@ const emailInp = document.querySelector('#email')
 const telInp = document.querySelector('#tel')
 const openModalBtn = document.querySelector('.btn')
 
+// создание элементов
 const successMessage = document.createElement('p')
 const closeBtn = document.createElement('button')
 const error = document.createElement('p')

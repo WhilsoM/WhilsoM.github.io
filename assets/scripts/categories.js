@@ -5,7 +5,6 @@ const categoriesBtns = document.querySelectorAll('.categories button')
 categoriesBtns.forEach((btn) => {
 	btn.addEventListener('click', (event) => {
 		const category = event.target.value
-		console.log(category)
 		let filteredData
 
 		if (category === 'all') {
