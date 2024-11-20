@@ -3,6 +3,8 @@ import { sortAlphabetically, sortByPrice } from './sort.js'
 
 export const attractionsWrapper = document.querySelector('.attractions__cards')
 const sortSelect = document.getElementById('sorting')
+// const card = document.querySelector('.card')
+// console.log(card)
 
 export let isLoading = true
 export let res = []
@@ -30,7 +32,7 @@ export const displayData = (data) => {
 	let result = ''
 
 	for (let i = 0; i < data.length; i++) {
-		result += `<article class="card">
+		result += `<article class="card" data-id=${data[i].id}>
                 <div class="card__img">
                   <img src=${data[i].image} alt=${data[i].title} />
                 </div>
@@ -43,6 +45,12 @@ export const displayData = (data) => {
 	}
 
 	attractionsWrapper.innerHTML = result
+}
+
+// card.addEventListener('click', linkToTemplate)
+// window.location.href = `/assets/pages/template.html/${id}`
+const linkToTemplate = async (i) => {
+	console.log('You clicked', i)
 }
 
 sortSelect.addEventListener('change', (event) => {
