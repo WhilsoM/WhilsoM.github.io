@@ -1,30 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Turneo</title>
-
+		<title>Dynamic title generate</title>
 		<link rel="stylesheet" href="../scss/main.css" />
-
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="../img/favicon/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="../img/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="../img/favicon/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="../img/favicon/site.webmanifest" />
 	</head>
 	<body>
 		<header class="header">
@@ -79,33 +59,15 @@
 		</header>
 
 		<main class="main">
-			<section class="attractions">
+			<section>
 				<div class="container">
-					<div class="attractions__info">
-						<h1 class="section-title">Достопримечательности</h1>
-						<h4 class="attractions__subtitle">Санкт-Петербурга</h4>
-						<div class="border-line-red"></div>
+					<img class="img" src="" alt="" />
 
-						<input
-							type="text"
-							placeholder="Поиск..."
-							class="attractions__input"
-						/>
+					<h1 class="title"></h1>
 
-						<select name="sort" id="sorting">
-							<option value="alphabet">По алфавиту</option>
-							<option value="price">По цене</option>
-						</select>
+					<p class="description"></p>
 
-						<div class="categories">
-							<button value="all">Все</button>
-							<button value="музей">музеи</button>
-							<button value="храмы">храмы</button>
-							<button value="лесопарки">лесопарки</button>
-						</div>
-					</div>
-
-					<section class="attractions__cards"></section>
+					<div class="map"></div>
 				</div>
 			</section>
 		</main>
@@ -147,10 +109,6 @@
 			</div>
 		</footer>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-		<script type="module" src="../scripts/main.js"></script>
-		<script src="../scripts/search-attractions.js"></script>
-		<script type="module" src="../scripts/info-attractions.js"></script>
-		<script type="module" src="../scripts/categories.js"></script>
+		<script type="module" src="../scripts/template.js"></script>
 	</body>
 </html>

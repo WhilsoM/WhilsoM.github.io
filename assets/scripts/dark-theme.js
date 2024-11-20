@@ -83,7 +83,7 @@ function changeTheme(src, themeClass, color) {
 		phoneLink.classList.toggle('dark-theme', themeClass === 'dark-theme')
 		phoneLink.classList.toggle('white-theme', themeClass === 'white-theme')
 	} catch (err) {
-		console.error('ОШИБКА: НЕ СУЩЕСТВУЕТ ПОПАПА или ССЫЛОК!')
+		console.log('')
 	}
 
 	sectionTitles.forEach((elem) => (elem.style.color = color))
