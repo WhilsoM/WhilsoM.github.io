@@ -8,7 +8,7 @@ export let isLoading = true
 export let res = []
 let currentData = []
 
-const fetchData = async () => {
+export const fetchData = async () => {
 	try {
 		Loader()
 
@@ -30,7 +30,7 @@ export const displayData = (data) => {
 	let result = ''
 
 	for (let i = 0; i < data.length; i++) {
-		result += `<article class="card">
+		result += `<article class="card" data-id="${data[i].id}">
                 <div class="card__img">
                   <img src=${data[i].image} alt=${data[i].title} />
                 </div>
@@ -46,21 +46,25 @@ export const displayData = (data) => {
 }
 
 sortSelect.addEventListener('change', (event) => {
-	const sortType = event.target.value
-	let sortedData
+	try {
+		const sortType = event.target.value
+		let sortedData
 
-	switch (sortType) {
-		case 'alphabet':
-			sortedData = sortAlphabetically(currentData)
-			break
-		case 'price':
-			sortedData = sortByPrice(currentData)
-			break
-		default:
-			sortedData = currentData
+		switch (sortType) {
+			case 'alphabet':
+				sortedData = sortAlphabetically(currentData)
+				break
+			case 'price':
+				sortedData = sortByPrice(currentData)
+				break
+			default:
+				sortedData = currentData
+		}
+
+		displayData(sortedData)
+	} catch (err) {
+		console.error('error', err)
 	}
-
-	displayData(sortedData)
 })
 
 fetchData()

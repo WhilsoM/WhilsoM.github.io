@@ -40,6 +40,8 @@
 
 	.card {
 		@include flex();
+		cursor: pointer;
+
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;

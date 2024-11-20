@@ -490,6 +490,7 @@ legend {
 .attractions__cards .card {
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   flex-direction: column;
