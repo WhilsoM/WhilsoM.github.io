@@ -1,37 +1,3 @@
-// const slider = document.querySelector('.slider')
-// const slides = document.querySelectorAll('.slide')
-// const prevButton = document.querySelector('.prev')
-// const nextButton = document.querySelector('.next')
-// let currentSlide = 0
-
-// // Show the first slide
-// slides[currentSlide].style.display = 'block'
-
-// // Add event listeners to the navigation buttons
-// prevButton.addEventListener('click', () => {
-// 	currentSlide--
-// 	if (currentSlide < 0) {
-// 		currentSlide = slides.length - 1
-// 	}
-// 	updateSlider()
-// })
-
-// nextButton.addEventListener('click', () => {
-// 	currentSlide++
-// 	if (currentSlide >= slides.length) {
-// 		currentSlide = 0
-// 	}
-// 	updateSlider()
-// })
-
-// // Update the slider
-// function updateSlider() {
-// 	for (let i = 0; i < slides.length; i++) {
-// 		slides[i].style.display = 'none'
-// 	}
-// 	slides[currentSlide].style.display = 'block'
-// }
-
 let slideImages = document.querySelectorAll('.img')
 //access the next & prev buttons
 let next = document.querySelector('.next')

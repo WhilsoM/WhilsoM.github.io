@@ -1,6 +1,7 @@
 import { Loader } from './loader.js'
 import { sortAlphabetically, sortByPrice } from './sort.js'
 
+export const attractionsInfo = document.querySelector('.attractions__info')
 export const attractionsWrapper = document.querySelector('.attractions__cards')
 const sortSelect = document.getElementById('sorting')
 
@@ -8,7 +9,7 @@ export let isLoading = true
 export let res = []
 let currentData = []
 
-export const fetchData = async () => {
+const fetchData = async () => {
 	try {
 		Loader()
 
@@ -26,11 +27,12 @@ export const fetchData = async () => {
 	}
 }
 
-export const displayData = (data) => {
-	let result = ''
+export let result = ''
 
+export const displayData = (data) => {
+	result = '' // Очищаем result перед заполнением
 	for (let i = 0; i < data.length; i++) {
-		result += `<article class="card" data-id="${data[i].id}">
+		result += `<article class="card" data-id=${data[i].id}>
                 <div class="card__img">
                   <img src=${data[i].image} alt=${data[i].title} />
                 </div>
@@ -46,25 +48,21 @@ export const displayData = (data) => {
 }
 
 sortSelect.addEventListener('change', (event) => {
-	try {
-		const sortType = event.target.value
-		let sortedData
+	const sortType = event.target.value
+	let sortedData
 
-		switch (sortType) {
-			case 'alphabet':
-				sortedData = sortAlphabetically(currentData)
-				break
-			case 'price':
-				sortedData = sortByPrice(currentData)
-				break
-			default:
-				sortedData = currentData
-		}
-
-		displayData(sortedData)
-	} catch (err) {
-		console.error('error', err)
+	switch (sortType) {
+		case 'alphabet':
+			sortedData = sortAlphabetically(currentData)
+			break
+		case 'price':
+			sortedData = sortByPrice(currentData)
+			break
+		default:
+			sortedData = currentData
 	}
+
+	displayData(sortedData)
 })
 
 fetchData()
