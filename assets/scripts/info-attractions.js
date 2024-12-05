@@ -30,7 +30,7 @@ const fetchData = async () => {
 export let result = ''
 
 export const displayData = (data) => {
-	result = '' // Очищаем result перед заполнением
+	result = ''
 	for (let i = 0; i < data.length; i++) {
 		result += `<article class="card" data-id=${data[i].id}>
                 <div class="card__img">
