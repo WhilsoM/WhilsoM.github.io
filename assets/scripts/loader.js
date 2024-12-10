@@ -1,7 +1,10 @@
 // imports
-import { attractionsWrapper, isLoading } from './info-attractions.js'
+import { isLoading } from './global.js'
+import { attractionsWrapper } from './info-attractions.js'
 
-const loaderTemplate = `<div class="loader"></div>`
+export const Loader = () => {
+	const div = document.createElement('div')
+	div.classList.add('loader')
 
-export const Loader = () =>
-	isLoading ? (attractionsWrapper.innerHTML = loaderTemplate) : ''
+	return isLoading ? attractionsWrapper.appendChild(div) : ''
+}

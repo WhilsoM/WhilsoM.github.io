@@ -23,7 +23,7 @@ export const fetchData = async () => {
 		Loader()
 
 		const obj = await axios.get(
-			'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
+			'https://6729edd66d5fa4901b6f05f6.mockapi.io/items'
 		)
 		res = obj.data
 		console.log(res)

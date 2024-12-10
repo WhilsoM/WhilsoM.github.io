@@ -5,7 +5,6 @@ export const attractionsInfo = document.querySelector('.attractions__info')
 export const attractionsWrapper = document.querySelector('.attractions__cards')
 const sortSelect = document.getElementById('sorting')
 
-export let isLoading = true
 export let res = []
 let currentData = []
 
@@ -14,7 +13,7 @@ const fetchData = async () => {
 		Loader()
 
 		const obj = await axios.get(
-			'https://6729edd66d5fa4901b6f05f6.mockapi.io/attractions-data'
+			'https://6729edd66d5fa4901b6f05f6.mockapi.io/items'
 		)
 		res = obj.data
 		currentData = res
@@ -23,7 +22,7 @@ const fetchData = async () => {
 	} catch (error) {
 		console.log('не работает', error)
 	} finally {
-		isLoading = false
+		Loader()
 	}
 }
 
@@ -65,4 +64,4 @@ sortSelect.addEventListener('change', (event) => {
 	displayData(sortedData)
 })
 
-fetchData()
+// fetchData()
