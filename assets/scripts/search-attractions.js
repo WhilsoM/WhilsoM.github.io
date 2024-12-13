@@ -1,25 +1,15 @@
-import { attractionsWrapper, result } from './info-attractions.js'
+import { API_URL, contentDiv, renderData } from './pagination.js'
 
-const searchInput = document.querySelector('.attractions__input')
 const notFoundItems = 'Ничего не найдено'
+const searchInput = document.querySelector('.attractions__input')
 
-searchInput.addEventListener('input', (e) => {
-	let found = false
+// поисковик
+searchInput.addEventListener('input', async (e) => {
+	const url = `${API_URL}?search=${e.target.value}`
+	const res = await fetch(url)
+	const data = await res.json()
 
-	;[...document.querySelectorAll('.card')].forEach((item) => {
-		if (item.textContent.toLowerCase().includes(e.target.value.toLowerCase())) {
-			item.style.display = 'flex'
-			found = true
-		} else {
-			item.style.display = 'none'
-		}
-	})
+	contentDiv.innerHTML = ''
 
-	if (e.target.value.length === 0) {
-		attractionsWrapper.innerHTML = result
-	} else if (!found) {
-		attractionsWrapper.textContent = notFoundItems
-	} else {
-		attractionsWrapper.innerHTML = attractionsWrapper.innerHTML
-	}
+	renderData(data)
 })
