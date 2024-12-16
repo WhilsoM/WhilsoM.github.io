@@ -1,6 +1,7 @@
 export const contentDiv = document.querySelector('#content')
 const loader = document.querySelector('.loader')
 const sortingSelect = document.querySelector('#sorting')
+// const categoriesBtns = document.querySelectorAll('.categories button')
 
 export const API_URL = 'https://6729edd66d5fa4901b6f05f6.mockapi.io/items'
 
@@ -34,8 +35,6 @@ const fetchData = async (page, sortBy, order) => {
 		loader.style.display = 'none'
 	}
 }
-
-// сделать проверку: длину кол-ва данных в мокапи и длину сколько находиться на сайте если же это равно то делать return и не будет происходить лоадинг и ошибки
 
 export const renderData = (data) => {
 	data.forEach((item) => {
@@ -73,15 +72,50 @@ window.addEventListener('scroll', () => {
 	if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
 		currentPage++
 		const sort = sortingSelect.value
+
 		fetchData(currentPage, sort)
 	}
 })
 
-sortingSelect.addEventListener('change', () => {
+sortingSelect.addEventListener('change', function () {
+	const sortValue = this.value
+	let sortBy, order
+
+	switch (sortValue) {
+		case 'alphabet':
+			sortBy = 'name'
+			order = 'asc'
+			break
+		case 'famous':
+			sortBy = 'popularity'
+			order = 'desc'
+			break
+		case 'price-up':
+			sortBy = 'price'
+			order = 'asc'
+			break
+		case 'price-down':
+			sortBy = 'price'
+			order = 'desc'
+			break
+		default:
+			return
+	}
 	currentPage = 1
-	contentDiv.innerHTML = ''
-	const sort = sortingSelect.value
-	fetchData(currentPage, sort)
+
+	fetchData(currentPage, sortBy, order)
 })
 
-fetchData(currentPage, sortingSelect.value, 'popularity', 'desc')
+// categoriesBtns.forEach((btn) => {
+// 	const url = ''
+// 	btn.addEventListener('click', (e) => {
+// 		const category = e.target.value
+// 		let filteredData
+
+// 		console.log(API_URL)
+
+// 		// displayData(filteredData)
+// 	})
+// })
+
+fetchData(currentPage, sortingSelect.value, 'popularity')

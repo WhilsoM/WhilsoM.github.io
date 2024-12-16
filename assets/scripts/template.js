@@ -15,9 +15,6 @@ const description = document.querySelector('.description')
 const img = document.querySelector('.img')
 const map = document.querySelector('.map')
 
-console.log(res)
-console.log(title)
-
 export const fetchData = async () => {
 	try {
 		Loader()
@@ -26,7 +23,6 @@ export const fetchData = async () => {
 			'https://6729edd66d5fa4901b6f05f6.mockapi.io/items'
 		)
 		res = obj.data
-		console.log(res)
 	} catch (error) {
 		console.log('не работает', error)
 	} finally {

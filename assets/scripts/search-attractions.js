@@ -4,12 +4,14 @@ const notFoundItems = 'Ничего не найдено'
 const searchInput = document.querySelector('.attractions__input')
 
 // поисковик
-searchInput.addEventListener('input', async (e) => {
-	const url = `${API_URL}?search=${e.target.value}`
-	const res = await fetch(url)
-	const data = await res.json()
+searchInput.addEventListener('input', (e) => {
+	setTimeout(async () => {
+		const url = `${API_URL}?search=${e.target.value}`
+		const res = await fetch(url)
+		const data = await res.json()
 
-	contentDiv.innerHTML = ''
+		contentDiv.innerHTML = ''
 
-	renderData(data)
+		renderData(data)
+	}, 1000)
 })

@@ -6,6 +6,7 @@ categoriesBtns.forEach((btn) => {
 	btn.addEventListener('click', (event) => {
 		const category = event.target.value
 		let filteredData
+		console.log(category)
 
 		if (category === 'all') {
 			filteredData = res

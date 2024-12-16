@@ -93,10 +93,18 @@
 						/>
 
 						<select name="sort" id="sorting">
-							<option value="alphabet">По алфавиту</option>
-							<option value="famous">По популярности</option>
-							<option value="price-up">По цене (по возрастанию)</option>
-							<option value="price-down">По цене (по убыванию)</option>
+							<option class="sorting__option" value="alphabet">
+								По алфавиту (А-Я)
+							</option>
+							<option class="sorting__option" value="famous">
+								По популярности
+							</option>
+							<option class="sorting__option" value="price-up">
+								По цене (по возрастанию) asc
+							</option>
+							<option class="sorting__option" value="price-down">
+								По цене (по убыванию) desc
+							</option>
 						</select>
 
 						<div class="categories">
@@ -105,17 +113,6 @@
 							<button value="храмы">храмы</button>
 							<button value="лесопарки">лесопарки</button>
 						</div>
-
-						<!-- <button id="sort-by-popularity-desc">
-							По популярности (сначала популярные)
-						</button>
-						<button id="sort-by-popularity-asc">
-							По популярности (сначала непопулярные)
-						</button>
-						<button id="sort-by-price-asc">По цене (по возрастанию)</button>
-						<button id="sort-by-price-desc">По цене (по убыванию)</button>
-						<button id="sort-by-name-asc">По алфавиту (А-Я)</button>
-						<button id="sort-by-name-desc">По алфавиту (Я-А)</button> -->
 					</div>
 
 					<section id="content" class="attractions__cards"></section>
@@ -165,7 +162,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 		<script type="module" src="../scripts/main.js"></script>
 		<script type="module" src="../scripts/search-attractions.js"></script>
-		<script type="module" src="../scripts/info-attractions.js"></script>
 		<script type="module" src="../scripts/categories.js"></script>
 		<script type="module" src="../scripts/pagination.js"></script>
 	</body>

@@ -45,7 +45,7 @@ export const displayData = (data) => {
 
 	attractionsWrapper.innerHTML = result
 }
-
+// сортировка добавить
 sortSelect.addEventListener('change', (event) => {
 	const sortType = event.target.value
 	let sortedData
