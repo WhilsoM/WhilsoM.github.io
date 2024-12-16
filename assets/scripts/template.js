@@ -6,32 +6,20 @@
  *
  * добавить в mockapi - категории по которым можно будет фильтровать достопримечательности
  */
+import { API_URL } from './pagination.js'
 
-import { isLoading } from './info-attractions.js'
-import { Loader } from './loader.js'
+async function loadAttraction() {
+	const params = new URLSearchParams(window.location.search)
+	const id = params.get('id')
+	const response = await fetch(`${API_URL}/${id}`)
+	const attraction = await response.json()
 
-const title = document.querySelector('.title')
-const description = document.querySelector('.description')
-const img = document.querySelector('.img')
-const map = document.querySelector('.map')
+	document.querySelector('.img').src = attraction.image
+	document.querySelector('.title').innerText = attraction.title
+	document.querySelector('.description').innerText = attraction.description
 
-export const fetchData = async () => {
-	try {
-		Loader()
-
-		const obj = await axios.get(
-			'https://6729edd66d5fa4901b6f05f6.mockapi.io/items'
-		)
-		res = obj.data
-	} catch (error) {
-		console.log('не работает', error)
-	} finally {
-		isLoading = false
-	}
+	// Здесь можно добавить код для загрузки изображений и т.д.
 }
 
-const displayBlock = (res) => {
-	let result = ''
-
-	// for (let i  = 0; i < res)
-}
+document.addEventListener('DOMContentLoaded', loadAttraction)
+console.log('hello')

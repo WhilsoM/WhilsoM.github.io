@@ -43,6 +43,10 @@ export const renderData = (data) => {
 		const h3 = document.createElement('h3')
 		const price = document.createElement('p')
 		const description = document.createElement('p')
+		const link = document.createElement('a')
+
+		link.href = `template.html?id=${item.id}`
+		link.textContent = 'Узнать подробнее ->'
 
 		img.src = item.image
 		img.alt = item.h3
@@ -61,6 +65,7 @@ export const renderData = (data) => {
 		article.appendChild(price)
 		article.appendChild(h3)
 		article.appendChild(description)
+		article.appendChild(link)
 
 		contentDiv.appendChild(article)
 	})
@@ -81,8 +86,7 @@ categoriesBtns.forEach((btn) => {
 	})
 })
 
-// sort
-sortingSelect.addEventListener('change', function () {
+function sort() {
 	const sortValue = this.value
 	let sortBy, order
 
@@ -113,8 +117,7 @@ sortingSelect.addEventListener('change', function () {
 
 	contentDiv.innerHTML = ''
 	fetchData(currentPage, sortBy, order, category)
-})
-
+}
 // Infinite scroll
 window.addEventListener('scroll', () => {
 	if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
@@ -127,4 +130,9 @@ window.addEventListener('scroll', () => {
 	}
 })
 
-fetchData(currentPage, sortingSelect.value, 'popularity', 'all')
+window.addEventListener('DOMContentLoaded', () => {
+	// sort
+	sortingSelect.addEventListener('change', sort)
+	fetchData(currentPage, sortingSelect.value, 'popularity', 'all')
+})
+// потом нужно будет по файлам раскидать для удобства я же не лох чтобы писать все в одном файле как санек пенек
