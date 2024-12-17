@@ -47,6 +47,7 @@ export const renderData = (data) => {
 
 		link.href = `template.html?id=${item.id}`
 		link.textContent = 'Узнать подробнее ->'
+		link.classList.add('article__link')
 
 		img.src = item.image
 		img.alt = item.h3

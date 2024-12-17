@@ -80,7 +80,3 @@ function switchImage(currentImage) {
 	}
 	indicators()
 }
-
-const addSum = () => {
-	retunr
-}

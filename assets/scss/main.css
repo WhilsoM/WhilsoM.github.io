@@ -509,6 +509,19 @@ legend {
   padding: 26px 11px;
 }
 
+.article__link {
+  color: indianred;
+  transition: opacity 0.3s ease;
+}
+.article__link:hover {
+  opacity: 0.8;
+}
+
+.img_full {
+  width: 100%;
+  height: 100%;
+}
+
 .contacts {
   font-size: 24px;
   margin-bottom: 100px;
@@ -536,6 +549,30 @@ legend {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  text-align: center;
+}
+.template .title {
+  font-size: 25px;
+  font-weight: 700;
+}
+.template .description {
+  font-size: 20px;
+}
+.template .title,
+.template .description {
+  width: 60%;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.modal .modal-content {
+  display: flex;
 }
 
 body {

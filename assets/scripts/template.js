@@ -7,6 +7,19 @@
  * добавить в mockapi - категории по которым можно будет фильтровать достопримечательности
  */
 import { API_URL } from './pagination.js'
+const templateContainer = document.querySelector('.template .container')
+
+const modal = (src, alt) => {
+	const modalTemplate = `
+      <div class="modal">
+        <div class="modal-content">
+          <img src=${src} alt=${alt}>
+        </div>
+      </div>
+  `
+
+	templateContainer.appendChild(modalTemplate)
+}
 
 async function loadAttraction() {
 	const params = new URLSearchParams(window.location.search)
@@ -14,12 +27,23 @@ async function loadAttraction() {
 	const response = await fetch(`${API_URL}/${id}`)
 	const attraction = await response.json()
 
-	document.querySelector('.img').src = attraction.image
-	document.querySelector('.title').innerText = attraction.title
-	document.querySelector('.description').innerText = attraction.description
+	const img = document.querySelectorAll('.img')
+	const title = document.querySelector('.title')
+	const description = document.querySelector('.description')
 
-	// Здесь можно добавить код для загрузки изображений и т.д.
+	// get current image index
+	let currentImage = 0
+
+	img[currentImage].src = attraction.image[currentImage]
+	img[currentImage].alt = attraction.title
+
+	title.innerText = attraction.title
+	description.innerText = attraction.description
+
+	img[currentImage].addEventListener('click', () => {
+		img[currentImage].classList.add('img_full')
+		modal()
+	})
 }
 
 document.addEventListener('DOMContentLoaded', loadAttraction)
-console.log('hello')
