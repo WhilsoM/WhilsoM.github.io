@@ -1,6 +1,5 @@
 import { API_URL, contentDiv, renderData } from './pagination.js'
 
-const notFoundItems = 'Ничего не найдено'
 const searchInput = document.querySelector('.attractions__input')
 
 // поисковик

@@ -47,3 +47,7 @@ async function loadAttraction() {
 }
 
 document.addEventListener('DOMContentLoaded', loadAttraction)
+
+const arr = ['a', 'b', 'c', 'd']
+
+const newArr = arr.map((item) => {})

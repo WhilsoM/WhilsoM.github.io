@@ -80,3 +80,5 @@ function switchImage(currentImage) {
 	}
 	indicators()
 }
+
+class Slider {}
