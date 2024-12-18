@@ -17,10 +17,10 @@ const rootPages = [
 	'https://whilsom.github.io/index.html',
 ]
 const subPages = [
-	'https://whilsom.github.io//assets/pages/attractions.html',
-	'https://whilsom.github.io//assets/pages/contacts.html',
-	'https://whilsom.github.io//assets/pages/contacts.html#!',
-	'https://whilsom.github.io//assets/pages/contacts.html?#',
+	'https://whilsom.github.io/assets/pages/attractions.html',
+	'https://whilsom.github.io/assets/pages/contacts.html',
+	'https://whilsom.github.io/assets/pages/contacts.html#!',
+	'https://whilsom.github.io/assets/pages/contacts.html?#',
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
