@@ -12,12 +12,15 @@ const modalContent = document.querySelector('.modal-content')
 const emailLink = document.querySelector('.email > a')
 const phoneLink = document.querySelector('.phone > a')
 
-const rootPages = ['http://127.0.0.1:5500/', 'http://127.0.0.1:5500/index.html']
+const rootPages = [
+	'https://whilsom.github.io/',
+	'https://whilsom.github.io/index.html',
+]
 const subPages = [
-	'http://127.0.0.1:5500/assets/pages/attractions.html',
-	'http://127.0.0.1:5500/assets/pages/contacts.html',
-	'http://127.0.0.1:5500/assets/pages/contacts.html#!',
-	'http://127.0.0.1:5500/assets/pages/contacts.html?#',
+	'https://whilsom.github.io//assets/pages/attractions.html',
+	'https://whilsom.github.io//assets/pages/contacts.html',
+	'https://whilsom.github.io//assets/pages/contacts.html#!',
+	'https://whilsom.github.io//assets/pages/contacts.html?#',
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
