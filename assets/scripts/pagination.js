@@ -135,4 +135,3 @@ window.addEventListener('DOMContentLoaded', () => {
 	sortingSelect.addEventListener('change', sort)
 	fetchData(currentPage, sortingSelect.value, 'popularity', 'all')
 })
-// потом нужно будет по файлам раскидать для удобства я же не лох чтобы писать все в одном файле как санек пенек
